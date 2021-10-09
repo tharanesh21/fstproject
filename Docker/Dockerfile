@@ -1,4 +1,6 @@
 FROM ubuntu
-COPY files / 
-CMD ["node","apple/index.js"]
+COPY files /
+COPY files/mybin /bin  
+COPY files/mylib /lib
+CMD ["node","/apple/index.js"]
 
