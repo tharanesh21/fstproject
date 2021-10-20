@@ -33,4 +33,11 @@ node {
             app.push("latest")
         }
     }
+     stage ('Deploy') {
+        steps {
+            sh 'scp deploy.sh ubuntu@13.232.240.15:~/'
+            sh 'ssh ubuntu@13.232.240.15"chmod +x deploy.sh"'
+            sh 'ssh ubuntu@13.232.240.15 ./deploy.ssh'
+        }
+    }
 }
