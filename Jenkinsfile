@@ -39,5 +39,5 @@ node {
             sh 'ssh ubuntu@13.232.240.15"chmod +x deploy.sh"'
             sh 'ssh ubuntu@13.232.240.15 ./deploy.sh'
         }
-    
+     }
 }
