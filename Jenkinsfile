@@ -34,10 +34,9 @@ node {
         }
     }
      stage ('Deploy') {
-        steps {
+            sh 'echo "deploy1"'
             sh 'scp deploy.sh ubuntu@52.66.116.104:~/'
             sh 'ssh ubuntu@52.66.116.104"chmod +x deploy.sh"'
             sh 'ssh ubuntu@52.66.116.104 ./deploy.sh'
-        }
      }
 }
